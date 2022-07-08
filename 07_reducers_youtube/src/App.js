@@ -1,24 +1,20 @@
 import "./App.css";
-import CounterSeven from "./components/CounterSevenUseState";
-// import CounterSix from "./components/CounterSixUseState";
-// import CounterFive from "./components/CounterFive";
-// import CounterFour from "./components/CounterFour";
-// import ClassCounter from "./components/ClassCounter";
-// import CounterOne from "./components/CounterOne";
-// import CounterThree from "./components/CounterThree";
-// import CounterTwo from "./components/CounterTwo";
+import { HookMouse } from "./components/useEffectHook/HookMouse";
+// import Counter2 from "./components/useEffectHook/Counter2";
+// import ClassComponent2 from "./components/useEffectHook/ClassComponent2";
+// import ClassComponent from "./components/useEffectHook/ClassComponent";
+// import Counter1 from "./components/useEffectHook/Counter1";
+// import ClassMouse from "./components/useEffectHook/ClassMouse";
 
 function App() {
   return (
     <div className="App">
-      {/* <CounterOne />
-      <CounterTwo /> */}
-      {/* <CounterThree /> */}
-      {/* <ClassCounter /> */}
-      {/* <CounterFour /> */}
-      {/* <CounterFive /> */}
-      {/* <CounterSix /> */}
-      <CounterSeven />
+      {/* <ClassComponent /> */}
+      {/* <Counter1 /> */}
+      {/* <ClassComponent2 /> */}
+      {/* <Counter2 /> */}
+      {/* <ClassMouse /> */}
+      <HookMouse />
     </div>
   );
 }
