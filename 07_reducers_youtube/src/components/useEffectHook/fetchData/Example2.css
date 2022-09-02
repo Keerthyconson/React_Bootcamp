@@ -1,0 +1,37 @@
+.input-box {
+  border: 1px solid lightgray;
+  max-width: 300px;
+  margin: auto;
+  padding: 10px;
+}
+
+button {
+  margin-left: 4px;
+  background-color: lightgray;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+input[type="text"] {
+  border: 1px solid gray;
+  text-align: center;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.content {
+  margin: auto 600px 0px;
+  text-align: left;
+  max-width: 600px;
+}
+
+.content p {
+  color: gray;
+  font-weight: bold;
+}
+.content p span {
+  color: black;
+  font-weight: normal;
+  padding: 2px;
+}

@@ -1,27 +1,38 @@
 import "./App.css";
-import IntervalHookCounter from "./components/useEffectHook/IntervalHookCounter";
-// import IntervalClassComponent from "./components/useEffectHook/IntervalClassComponent";
-// import MouseContainer from "./components/useEffectHook/MouseContainer";
-// import { HookMouse } from "./components/useEffectHook/HookMouse";
-// import Counter2 from "./components/useEffectHook/Counter2";
-// import ClassComponent2 from "./components/useEffectHook/ClassComponent2";
-// import ClassComponent from "./components/useEffectHook/ClassComponent";
-// import Counter1 from "./components/useEffectHook/Counter1";
-// import ClassMouse from "./components/useEffectHook/ClassMouse";
+import React, { useReducer } from "react";
+import ComponentA from "./components/useReducerHook/useRedWithuseContext/ComponentA";
+import ComponentB from "./components/useReducerHook/useRedWithuseContext/ComponentB";
+import ComponentC from "./components/useReducerHook/useRedWithuseContext/ComponentC";
 
+const initialState = 0;
+export const CountContext = React.createContext();
+
+const reducer = (state, action) => {
+  switch (action) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    case "reset":
+      return initialState;
+    default:
+      return state;
+  }
+};
 function App() {
+  const [count, dispatchCount] = useReducer(reducer, initialState);
+
   return (
-    <div className="App">
-      {/* <ClassComponent /> */}
-      {/* <Counter1 /> */}
-      {/* <ClassComponent2 /> */}
-      {/* <Counter2 /> */}
-      {/* <ClassMouse /> */}
-      {/* <HookMouse /> */}
-      {/* <MouseContainer /> */}
-      {/* <IntervalClassComponent /> */}
-      <IntervalHookCounter />
-    </div>
+    <CountContext.Provider value={{ count: count, dispatch: dispatchCount }}>
+      <div className="App">
+        <p>
+          Count : <span className="count">{count}</span>
+        </p>
+        <ComponentA />
+        <ComponentB />
+        <ComponentC />
+      </div>
+    </CountContext.Provider>
   );
 }
 
